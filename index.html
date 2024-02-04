@@ -6,25 +6,59 @@
     <title> ICC MENU</title>
     <style>
         .menu{
-            display: flex;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 2fr 2fr;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            background-color: burlywood;
+            flex-direction: row;
+            background-color:blanchedalmond;
+            gap:  solid black 10px;
+            grid-auto-rows: 1fr;
 
         }
-       h1,.icc{
+       header{
             font-size: xx-large;
             font-weight: bolder;
             font: italic;
             color: red;
-            text-align: center;
+            text-align:start;
+            align-items: flex-start;
+            justify-content:center;
+            align-content: flex-start;
+            display: flex;
+            
+        }
+        .tand{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: -2;
+            grid-row-end: -1;
+        }
+        .chicken{
+            grid-column-start:1 ;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        h1{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content:center ;
+            color: red;
+        }
+        .icc{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: -3;
         }
         .combo-list1{
             list-style-type: none;
+            text-align: center;
         }
         .combo-list{
             list-style-type: none;
+            text-align: center;
         }
         .tandoori{
             font-size: large;
@@ -51,22 +85,73 @@
             text-align: center;
             font-weight: bolder;
         }
-      
+      img{
+        border-radius: 50%;
+      }
+      .chicken-fry{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+      .chicken-roti{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: -1;
+        grid-row-end: 4;
+      }
+      .swiggy{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+      }
+      .insta{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+      }
+      h4{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 7;
+      }
+      footer{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 8;
+      }
+      @media(min-width:319px) and (max-width:480px){
+        body{
+            background-color: #F6FDC3;
+        }
+      }
     </style>
 </head>
 <body >
     <div class="menu">  
-        <div class="icc">ICC <img src="./png-clipart-chicken-broiler-rooster-poultry-farming-chicken-food-animals-thumbnail.png" height="50px" width="50px" /></div>
-         <h1>IMRAN CHICKEN CORNER <img src="./png-clipart-chicken-broiler-rooster-poultry-farming-chicken-food-animals-thumbnail.png" height="50px" width="50px"/></h1> <hr />
+       <header>ICC <img src="./png-clipart-chicken-broiler-rooster-poultry-farming-chicken-food-animals-thumbnail.png" height="50px" width="50px" /></header> <hr />
+         <div class="icc"><h1 class="icc">IMRAN CHICKEN CORNER <img src="./png-clipart-chicken-broiler-rooster-poultry-farming-chicken-food-animals-thumbnail.png" height="50px" width="50px"/></h1></div> 
+         <hr />
         <div class="tand">
             <h2>TANDOORI  </h2>
             <ul>
             <li class="combo-list1"><div class="tandoori">Tandoori: full:₹ 320  half: ₹ 170</div></li>
         <li class="combo-list"><div class="combo-tand">Tandoori combo price ↓</div></li>
-        <li class="combo-list"><div class="half-tand">Half tandoori + 5 roti: ₹200  </div></li>
         <li class="combo-list"> <div class="full-tand">Full tandoori + 5 roti: ₹350</div></li>
-    </ul> 
+        <li class="combo-list"><div class="half-tand">Half tandoori + 5 roti: ₹200  </div ></li>
+            <li class="combo-list"><div class="full-tand">Leg piece + 5 roti: ₹120</div></li>
+            <li class="combo-list"><div class="full-tand">Chest piece + 5 roti: ₹120</div></li>
+    </ul> <hr />
 </div>
+
 <div class="chicken">
     <h2>CHICKEN 65 </h2>
     <ul>
@@ -74,27 +159,28 @@
         <li class="combo-list"><div class="combo-tand">Chicken 65 combo price ↓</div></li>
         <li class="combo-list"><div class="half-tand">Half chicken 65 + 5 roti: ₹ 130<br /> Half chicken 65 + 3 roti:₹ 110</div></li>
         <li class="combo-list"><div class="full-tand"> Full chicken 65 + 5roti:₹ 210<br /> FUll chicken 65 + 3 roti:₹ 200</div></li>
-    </ul>
-</div>
-<div class="chicken">
+    </ul> <hr />
+</div> 
+<div class="chicken-fry">
     <h2>CHICKEN FRY </h2>
     <ul>    <li class="combo-list1"><div class= "tandoori">Chicken fry:full:₹ 220 half: ₹120</div></li>
     <li class="combo-list"><div class="combo-tand">Chicken fry combo price ↓</div></li>
     <li class="combo-list"><div class="half-tand">Half chicken fry + 5 roti: ₹ 150<br /> Half chicken fry + 3 roti:₹ 140</div></li>
     <li class="combo-list"><div class="full-tand"> Full chicken fry + 5roti:₹ 250<br /> FUll chicken fry + 3 roti:₹ 240</div></li></ul>
-</div>
-<div class="chicken">
+</div> <hr />
+<div class="chicken-roti">
     <h2>ROTI MENU </h2>
     <ul>
-        <li class="combo-list"><div class="half-tand">Only plain paratha:₹ 7</div></li>
         <li class="combo-list"><div class="half-tand"> Plain paratha:₹ 6</div></li>
+        <li class="combo-list"><div class="half-tand">Only plain paratha:₹ 7</div></li>
         <li class="combo-list"><div class="half-tand">Ring paratha:₹ 20</div></li>
+        
 
         
-    </ul>
+    </ul><hr />
 </div>
-<h3>ORDER ON SWIGGY <img src="./unnamed.png" height="29px" width="30px"/></h3>
-<h3>FOLLOW US ON <img src="./1409946.png" height="25px" width="25px" /></h3>
+<h3 class="swiggy">ORDER ON SWIGGY <img src="./unnamed.png" height="29px" width="30px"/></h3>
+<h3 class="insta">FOLLOW US ON <img src="./1409946.png" height="25px" width="25px" /></h3>
 <h4>@IMRANCHICKENCORNER_786</h4>
 <footer>THANK YOU 🙏</footer>
 
