@@ -48,7 +48,7 @@
             color: red;
         }
         .icc{
-            grid-column-start: 2;
+            grid-column-start: 1;
             grid-column-end: 3;
             grid-row-start: -3;
         }
@@ -137,14 +137,26 @@
         grid-column-start: 1;
         grid-column-end: 3;
       }
+      .colmn{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        text-align: center;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+
+      }
     </style>
 </head>
 <body >
     <div class="menu">  
         
-       <header>ICC <img src="./png-clipart-chicken-broiler-rooster-poultry-farming-chicken-food-animals-thumbnail.png" height="50px" width="50px" /></header> <hr />
+       <div class="colmn"><header>ICC <img src="./png-clipart-chicken-broiler-rooster-poultry-farming-chicken-food-animals-thumbnail.png" height="50px" width="50px" /></header> <hr />
          <div class="icc"><h1 class="icc">IMRAN CHICKEN CORNER <img src="./png-clipart-chicken-broiler-rooster-poultry-farming-chicken-food-animals-thumbnail.png" height="50px" width="50px"/></h1></div> 
-         <hr />
+         <hr /></div>
+         <div> </div>
         <div class="tand">
             <h2>TANDOORI  </h2>
             <ul>
